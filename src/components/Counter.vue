@@ -1,7 +1,8 @@
 <template>
   <div class="counter-container">
-    <h3 class="counter-title">{{ customTitle }}:</h3>
-    <span>{{ counter }}<sup>2</sup> = {{ getSquareCounter }} </span>
+    <h3 class="counter-title">{{ customTitle }}</h3>
+    <p>{{ counter }}<sup>2</sup> = {{ getSquareCounter }}</p>
+    <p data-testId="counter">{{ counter }}</p>
     <div class="counter-btn-container">
       <button @click="increase">+1</button>
       <button @click="decrease">-1</button>
@@ -13,12 +14,19 @@
 export default {
   props: {
     title: String,
+    start: {
+      type: Number,
+      default: 5,
+      validator(value) {
+        return value >= 0;
+      },
+    },
   },
   /* props:[title] //Si no quieres especificar el tipado */
   name: "Counter",
   data() {
     return {
-      counter: 5,
+      counter: this.start,
     };
   },
   methods: {
