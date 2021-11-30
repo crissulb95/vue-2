@@ -4,7 +4,12 @@
       <img v-if="bgGif" :src="bgGif" alt="bg" />
     </figure>
     <div class="input-container">
-      <input type="text" placeholder="Haz una pregunta" v-model="question" />
+      <input
+        type="text"
+        placeholder="Haz una pregunta"
+        v-model="question"
+        data-test-id="input-question"
+      />
       <small>Recuerda terminar con un signo de interrogación (?)</small>
     </div>
     <div v-if="isValidQuestion" class="question-container">
@@ -26,22 +31,35 @@ export default {
   },
   methods: {
     async getAnswer() {
-      this.answer = "pensando...";
+      try {
+        this.answer = "pensando...";
 
-      this.isValidQuestion = false;
-      const { answer, image } = await fetch("https://yesno.wtf/api").then(
-        (res) => res.json()
-      );
-      this.isValidQuestion = true;
+        const { answer, image } = await fetch("https://yesno.wtf/api")
+          .then((res) => res.json())
+          .catch((err) => console.error(err));
 
-      this.answer =
-        answer === "yes" ? "Si" : answer === "maybe" ? "Tal vez" : "No!";
-      this.bgGif = image;
+        this.answer =
+          answer === "yes" ? "Si" : answer === "maybe" ? "Tal vez" : "No!";
+        this.bgGif = image;
+      } catch (error) {
+        this.answer = "Hubo un error en la carga desde el API";
+        this.bgGif = null;
+        console.log(
+          "IndecisionComponent: Error en la carga desde el API",
+          error
+        );
+      }
     },
   },
   watch: {
     question(val) {
+      this.isValidQuestion = false;
+      console.log({ val });
+
       if (!val.includes("?")) return false;
+
+      console.log({ val });
+      this.isValidQuestion = true;
       this.getAnswer();
     },
   },
