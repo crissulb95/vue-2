@@ -2,19 +2,15 @@
   <!-- <figure class="img-container">
     <img alt="Vue logo" src="./assets/logo.png" />
   </figure> -->
-  <counter title="Entran" />
-  <counter title="Salen" />
-  <indecision />
+  <pokemon-page />
 </template>
 
 <script>
-import Counter from "./components/Counter.vue";
-import Indecision from "./components/Indecision.vue";
+import PokemonPage from "./pages/PokemonPage.vue";
 export default {
   name: "App",
   components: {
-    Counter,
-    Indecision,
+    PokemonPage,
   },
 };
 </script>
@@ -40,11 +36,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  height: 100vh;
   justify-content: center;
   text-align: center;
   width: 100%;
   position: relative;
+  background-image: url("https://www.transparenttextures.com/patterns/hixs-evolution.png");
 }
 #app > .img-container {
   flex: 0 0 100%;
