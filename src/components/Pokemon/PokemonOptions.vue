@@ -7,10 +7,11 @@
     </div>
     <ul>
       <li
-        v-for="pokemon in pokemons"
+        v-for="(pokemon, index) in pokemons"
         :key="pokemon.id"
         @click="$emit('selection', pokemon.id)"
         :class="afterClass(pokemon.id)"
+        :id="'option-' + (index + 1)"
       >
         <span>{{ pokemon.name }}</span>
       </li>

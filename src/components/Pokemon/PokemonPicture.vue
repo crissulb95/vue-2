@@ -1,7 +1,18 @@
 <template>
   <figure class="pokemon-picture-container">
-    <img :src="imgSrc" alt="pokemon image" class="hidden-pokemon fade-in" />
-    <img :src="imgSrc" alt="pokemon image" class="fade-in" v-if="show" />
+    <img
+      :src="imgSrc"
+      alt="pokemon image"
+      class="hidden-pokemon fade-in"
+      id="hidden-pokemon"
+    />
+    <img
+      :src="imgSrc"
+      alt="pokemon image"
+      class="fade-in"
+      v-if="show"
+      id="result"
+    />
   </figure>
 </template>
 

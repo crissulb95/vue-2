@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonOptions component Debería corresponder con el snapshot 1`] = `
+<div class="pokemon-options-container">
+  <div class="message">
+    <!--v-if-->
+  </div>
+  <ul>
+    <li class="fade-in" id="option-1"><span>gyarados</span></li>
+    <li class="fade-in" id="option-2"><span>cyndaquil</span></li>
+    <li class="fade-in" id="option-3"><span>meloetta-aria</span></li>
+    <li class="fade-in" id="option-4"><span>spinarak</span></li>
+  </ul><button>Volver a jugar !</button>
+</div>
+`;
