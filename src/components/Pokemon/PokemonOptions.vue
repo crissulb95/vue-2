@@ -16,7 +16,7 @@
         <span>{{ pokemon.name }}</span>
       </li>
     </ul>
-    <button @click="$emit('newGame')">Volver a jugar !</button>
+    <button @click="$emit('newGame')" id="replay">Volver a jugar !</button>
   </div>
 </template>
 

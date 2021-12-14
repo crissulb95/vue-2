@@ -1,0 +1,284 @@
+/* CAPA DE FONDO(BACKGROUND) */
+.introjs-helperLayer {
+  box-shadow: /* rgba(0, 0, 0, 0.8) 0px 0px 1px 2px, */ rgba(0, 0, 0, 0.45) 0px
+    0px 0px 5000px !important;
+}
+
+/* TOOLTIP TOOLTIP TOOLTIP TOOLTIP  */
+/* TOOLTIP TOOLTIP TOOLTIP TOOLTIP  */
+/* TOOLTIP TOOLTIP TOOLTIP TOOLTIP  */
+
+.introjs-tooltipReferenceLayer
+  .introjs-tooltip.modal-popover-class.introduction {
+  width: 574px !important;
+  max-width: unset !important;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 767px) {
+  .introjs-tooltipReferenceLayer
+    .introjs-tooltip.modal-popover-class.introduction {
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+}
+.introjs-tooltipReferenceLayer .introjs-tooltip {
+  padding: 30px 20px;
+  transition: 0.4s all ease-in-out;
+  margin: 0 !important;
+}
+
+/* CONTENEDOR DE IMAGEN Y TÍTULO */
+/* CONTENEDOR DE IMAGEN Y TÍTULO */
+/* CONTENEDOR DE IMAGEN Y TÍTULO */
+
+.introjs-tooltipReferenceLayer .introjs-tooltip .introjs-tooltip-header {
+  flex: 0 0 100% !important;
+  padding: 0 !important;
+  display: flex;
+}
+
+.introjs-tooltipReferenceLayer
+  .introjs-tooltip
+  .introjs-tooltip-header
+  .introjs-tooltip-title {
+  flex: 0 0 100% !important;
+  padding: 0;
+}
+.introjs-tooltipReferenceLayer
+  .introjs-tooltip
+  .introjs-tooltip-header
+  .introjs-skipbutton {
+  display: none;
+}
+
+.introjs-tooltip
+  .introjs-tooltip-header
+  .introjs-tooltip-title
+  .top-container
+  .image-container {
+  display: none;
+}
+
+.introjs-tooltip.modal-popover-class.introduction
+  .introjs-tooltip-header
+  .introjs-tooltip-title
+  .top-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.introjs-tooltip.modal-popover-class.introduction
+  .introjs-tooltip-header
+  .introjs-tooltip-title
+  .top-container
+  .image-container {
+  align-items: center;
+  display: flex;
+  flex: 0 0 100%;
+  height: 200px;
+  justify-content: center;
+  margin: 0 0 38px;
+  position: relative;
+  width: 200px;
+}
+
+.introjs-tooltip.modal-popover-class.introduction
+  .introjs-tooltip-header
+  .introjs-tooltip-title
+  .top-container
+  .image-container
+  > img {
+  height: 100%;
+  left: 50%;
+  object-fit: contain;
+  object-position: center;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.introjs-tooltip.modal-popover-class.introduction
+  .introjs-tooltip-header
+  .introjs-tooltip-title
+  .top-container
+  > h2,
+.introjs-tooltip h2,
+.introjs-tooltip > .introjs-tooltip-header > .introjs-tooltip-title > h2 {
+  color: #000000;
+  display: block;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 23px;
+  text-align: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 0 !important;
+}
+
+/* CONTENEDOR DE DESCRIPCIÓN Y BULLET POINTS */
+/* CONTENEDOR DE DESCRIPCIÓN Y BULLET POINTS */
+/* CONTENEDOR DE DESCRIPCIÓN Y BULLET POINTS */
+
+.introjs-tooltip > .introjs-tooltiptext {
+  padding: 0 !important;
+  flex: 0 0 100%;
+  margin-bottom: 36px;
+}
+.introjs-tooltip > .introjs-tooltiptext {
+  padding: 0 !important;
+  flex: 0 0 100%;
+  margin-bottom: 26px;
+}
+.introjs-tooltip > .introjs-tooltiptext > .text-container,
+.introjs-tooltip > .introjs-tooltiptext > .text-container * {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 19px;
+  text-align: center !important;
+  margin: 0;
+}
+
+.introjs-tooltip > .introjs-tooltiptext > .text-container strong {
+  font-weight: bold;
+}
+
+.introjs-tooltip:not(.modal-popover-class.introduction) > .introjs-bullets {
+  display: none;
+}
+.introjs-tooltip.modal-popover-class.introduction > .introjs-bullets {
+  padding: 0;
+  margin-bottom: 28px;
+}
+
+/* .introjs-tooltip.modal-popover-class.introduction
+  > .introjs-bullets
+  > [role="tablist"],
+.introjs-tooltip.modal-popover-class.introduction > .introjs-bullets > ul {
+  
+}
+.introjs-tooltip.modal-popover-class.introduction
+  > .introjs-bullets
+  > ul
+  > [role="presentation"],
+.introjs-tooltip.modal-popover-class.introduction > .introjs-bullets > ul > li {
+} */
+.introjs-tooltip.modal-popover-class.introduction
+  > .introjs-bullets
+  > ul
+  > li
+  > [role="button"],
+.introjs-tooltip.modal-popover-class.introduction
+  > .introjs-bullets
+  > ul
+  > li
+  > a {
+  height: 5px;
+  width: 21px;
+  background-color: #eceff1;
+  border-radius: 50px;
+  margin-right: 7px;
+  transition: 0.4s all ease-in-out;
+}
+.introjs-tooltip.modal-popover-class.introduction
+  > .introjs-bullets
+  > ul
+  > li
+  > a[role="button"].active,
+.introjs-tooltip.modal-popover-class.introduction
+  > .introjs-bullets
+  > ul
+  > li
+  > a.active,
+.introjs-tooltip.modal-popover-class.introduction
+  > .introjs-bullets
+  > ul
+  > li
+  > .active {
+  background-color: #29b6f6;
+  transition: 0.4s all ease-in-out;
+}
+
+/* FOOTER CONTENEDOR DE BOTONES */
+/* FOOTER CONTENEDOR DE BOTONES */
+/* FOOTER CONTENEDOR DE BOTONES */
+
+.introjs-tooltip:not(.modal-popover-class.introduction)
+  > .introjs-tooltipbuttons {
+  padding-top: 0;
+}
+.introjs-tooltip > .introjs-tooltipbuttons {
+  margin: 0;
+  padding: 26px 0 0;
+  border: none;
+}
+.introjs-tooltip > .introjs-tooltipbuttons::after,
+.introjs-tooltip > .introjs-tooltipbuttons::before {
+  content: none !important;
+}
+.introjs-tooltip > .introjs-tooltipbuttons > .introjs-button.introjs-prevbutton,
+.introjs-tooltip
+  > .introjs-tooltipbuttons
+  > .introjs-button.introjs-prevbutton.introjs-disabled {
+  display: none;
+}
+.introjs-tooltip
+  > .introjs-tooltipbuttons
+  > .introjs-button.introjs-button.introjs-nextbutton,
+.introjs-tooltip
+  > .introjs-tooltipbuttons
+  > .introjs-button.introjs-button.introjs-nextbutton.introjs-donebutton,
+.introjs-tooltip
+  > .introjs-tooltipbuttons
+  > .introjs-button.introjs-button.introjs-nextbutton.introjs-disabled {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: #29b6f6;
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.introjs-tooltip > .introjs-tooltipbuttons > .introjs-button,
+.introjs-tooltip > .introjs-tooltipbuttons > .introjs-button:hover,
+.introjs-tooltip > .introjs-tooltipbuttons > .introjs-button:focus,
+.introjs-tooltip > .introjs-tooltipbuttons > .introjs-button:active {
+  outline: none !important;
+  box-shadow: none;
+  float: unset !important;
+}
+
+.introjs-arrow {
+  border: 10px solid transparent;
+}
+.introjs-arrow.bottom {
+  bottom: -19px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.introjs-arrow.top {
+  top: -19px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.introjs-arrow.left,
+.introjs-arrow.left-bottom {
+  left: -19px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.introjs-arrow.right {
+  right: -19px;
+  top: 50%;
+  transform: translate(0, -50%);
+}

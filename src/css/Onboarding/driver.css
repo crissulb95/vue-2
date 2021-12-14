@@ -1,0 +1,200 @@
+div#driver-highlighted-element-stage {
+  display: none !important;
+}
+div#driver-popover-item.modal-popover-class.introduction {
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%);
+}
+div#driver-popover-item.modal-popover-class {
+  width: 574px;
+  display: flex;
+  max-width: unset;
+  padding: 30px 20px;
+  transition: 0.4s all ease-in-out;
+}
+
+/* CONTENEDOR DE IMAGEN Y TÍTULO */
+/* CONTENEDOR DE IMAGEN Y TÍTULO */
+/* CONTENEDOR DE IMAGEN Y TÍTULO */
+
+div#driver-popover-item.modal-popover-class .driver-popover-title {
+  flex: 0 0 100%;
+}
+div#driver-popover-item.modal-popover-class
+  .driver-popover-title
+  .top-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+div#driver-popover-item.modal-popover-class
+  .driver-popover-title
+  .top-container
+  .image-container {
+  display: none;
+}
+
+div#driver-popover-item.modal-popover-class.introduction
+  .driver-popover-title
+  .top-container
+  .image-container {
+  align-items: center;
+  display: flex;
+  flex: 0 0 100%;
+  height: 200px;
+  justify-content: center;
+  margin: 0 0 38px;
+  position: relative;
+  width: 200px;
+}
+
+div#driver-popover-item.modal-popover-class
+  > .driver-popover-title
+  > .top-container
+  > .image-container
+  > img {
+  height: 100%;
+  left: 50%;
+  object-fit: contain;
+  object-position: center;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+div#driver-popover-item.modal-popover-class
+  > .driver-popover-title
+  > .top-container
+  > h2,
+div#driver-popover-item.modal-popover-class h2 {
+  color: #000000;
+  display: block;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 23px;
+  margin: 0 0 16px;
+  text-align: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* CONTENEDOR DE DESCRIPCIÓN Y BULLET POINTS */
+/* CONTENEDOR DE DESCRIPCIÓN Y BULLET POINTS */
+/* CONTENEDOR DE DESCRIPCIÓN Y BULLET POINTS */
+
+div#driver-popover-item.modal-popover-class:not(.introduction)
+  > .driver-popover-description,
+div#driver-popover-item.modal-popover-class:not(.introduction)
+  > .driver-popover-description
+  p {
+  margin-bottom: 26px;
+}
+
+div#driver-popover-item.modal-popover-class > .driver-popover-description {
+  display: block;
+  width: 100%;
+}
+div#driver-popover-item.modal-popover-class > .driver-popover-description,
+div#driver-popover-item.modal-popover-class
+  > .driver-popover-description
+  strong,
+div#driver-popover-item.modal-popover-class > .driver-popover-description p {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 19px;
+  text-align: center !important;
+  margin-bottom: 46px;
+}
+div#driver-popover-item.modal-popover-class
+  > .driver-popover-description
+  strong {
+  font-weight: bold;
+}
+
+div#driver-popover-item.modal-popover-class
+  > .driver-popover-description
+  > .bullet-points-container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  padding-left: 0;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+  display: block;
+}
+
+div#driver-popover-item.modal-popover-class
+  > .driver-popover-description
+  > .bullet-points-container
+  > .bullet-point.active {
+  background-color: #29b6f6;
+  transition: 0.4s all ease-in-out;
+}
+div#driver-popover-item.modal-popover-class
+  > .driver-popover-description
+  > .bullet-points-container
+  > .bullet-point {
+  position: relative;
+  height: 5px;
+  width: 21px;
+  background-color: #eceff1;
+  border-radius: 50px;
+  margin-right: 7px;
+  transition: 0.4s all ease-in-out;
+}
+
+div#driver-popover-item.modal-popover-class
+  > .driver-popover-description
+  > .bullet-points-container
+  > .bullet-point:last-child {
+  margin-right: 0;
+}
+
+/* FOOTER CONTENEDOR DE BOTONES */
+/* FOOTER CONTENEDOR DE BOTONES */
+/* FOOTER CONTENEDOR DE BOTONES */
+
+div#driver-popover-item.modal-popover-class
+  > div.driver-clearfix.driver-popover-footer {
+  display: flex !important;
+  flex: 0 0 100%;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+
+div#driver-popover-item.modal-popover-class
+  > div.driver-clearfix.driver-popover-footer
+  button {
+  background-color: transparent;
+  border: none;
+  color: #29b6f6;
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+div#driver-popover-item.modal-popover-class
+  > div.driver-clearfix.driver-popover-footer
+  > .driver-btn-group.driver-navigation-btns
+  > .driver-close-btn {
+  margin-right: 25px;
+}
+div#driver-popover-item.modal-popover-class.final
+  > div.driver-clearfix.driver-popover-footer
+  .driver-close-btn {
+  display: none !important;
+}
+div#driver-popover-item.modal-popover-class
+  > div.driver-clearfix.driver-popover-footer
+  .driver-disabled {
+  display: none !important;
+}

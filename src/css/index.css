@@ -1,2 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 @import url("./animations.css");
 @import url("./styles.css");
+@import url("./Onboarding/driver.css");
+@import url("./Onboarding/introjs.css");

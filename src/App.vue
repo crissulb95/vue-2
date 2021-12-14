@@ -7,6 +7,8 @@
 
 <script>
 import PokemonPage from "./pages/PokemonPage.vue";
+import "driver.js/dist/driver.min.css";
+
 export default {
   name: "App",
   components: {

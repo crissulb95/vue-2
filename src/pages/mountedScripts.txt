@@ -1,0 +1,256 @@
+IMPORTS 
+//IntroJS
+//import introJs from "intro.js";
+
+//Bootstrap Tour
+//import Tour from "@/lib/tour";
+//import "@/lib/tour/bootstrap-tour/build/css/bootstrap-tour-standalone.css";
+
+//Product Tour
+//import { ProductTourJS } from "@/lib/Product Tour/lib.js";
+//import "@/lib/Product Tour/lib.css";
+
+/* //Shepherdjs
+import Shepherd from "shepherd.js";
+import "shepherd.js/dist/css/shepherd.css";
+const tour = new Shepherd.Tour({
+  defaultStepOptions: {
+    classes: "shadow-md bg-purple-dark",
+    scrollTo: true,
+    popperOptions: {
+      modifiers: [{ name: "offset", options: { offset: [15, 15] } }],
+    },
+  },
+}); */
+
+SCRIPT
+    //Driver js
+    mountDriver() {
+      if (this.pokemon !== null && driver === null) {
+        this.$nextTick(() => {
+          driver = new Driver();
+          console.log("object", document.querySelector(".pokemon-page"));
+          // console.log(driver);
+          // Define the steps for introduction
+          driver.defineSteps([
+            {
+              element: ".pokemon-page",
+              popover: {
+                className: "first-step-popover-class",
+                title: "Bienvenido/a al nuevo Safit",
+                description:
+                  "Una manera más eficiente de operar las funcionalidades de antes, junto a nuevos módulos",
+                position: "mid-center",
+              },
+            },
+            {
+              element: ".pokemon-page",
+              popover: {
+                className: "first-step-popover-class",
+                title: "Title on Popover",
+                description: "Body of the popover",
+                position: "mid-center",
+              },
+            },
+            {
+              element: "#option-1",
+              popover: {
+                className: "first-step-popover-class",
+                title: "Title on Popover",
+                description: "Body of the popover",
+                position: "right",
+              },
+            },
+            {
+              element: "#option-3",
+              popover: {
+                title: "Title on Popover",
+                description: "Body of the popover",
+                position: "top",
+              },
+            },
+            {
+              element: "#option-4",
+              popover: {
+                title: "Title on Popover",
+                description: "Body of the popover",
+                position: "left",
+              },
+            },
+            {
+              element: "#option-4",
+              popover: {
+                title: "Title on Popover",
+                description: "Body of the popover",
+                position: "left",
+              },
+            },
+          ]);
+
+          setTimeout(() => {
+            // Start the introduction
+            driver.start();
+          }, 2000);
+        });
+      }
+    },
+
+    //IntroJS
+    /*setTimeout(() => {
+       introJs()
+        .setOptions({
+          steps: [
+            {
+              title: "Welcome",
+              intro: "Hello World! 👋",
+            },
+            {
+              element: document.querySelector(".hidden-pokemon"),
+              intro: "This step focuses on this hidden image",
+              position: "top",
+            },
+            {
+              element: document.querySelector(
+                ".pokemon-options-container #option-3"
+              ),
+              intro: "This step focuses on this option and position",
+              position: "right",
+            },
+            {
+              title: "Farewell!",
+              element: document.querySelector(".pokemon-options-container"),
+              intro: "And this is our final step!",
+            },
+          ],
+        })
+        .start(); 
+    }, 2000);*/
+
+    //Bootstrap Tour
+    /* var tour = new Tour({
+      steps: [
+        {
+          element: "#hidden-pokemon",
+          title: "<h4>Title of my step</h4>",
+          content: "Content of my step",
+          placement: "auto",
+        },
+        {
+          element: ".pokemon-options-container #option-3",
+          title: "<h4>Title of next step</h4>",
+          content: "Content of next step, searching for option",
+          placement: "auto",
+          backdrop: true,
+          backdropPadding: 15,
+        },
+      ],
+      storage: false,
+    });
+
+    setTimeout(() => {
+      // Initialize the tour
+      tour.init();
+      // Start the tour
+      tour.start();
+      console.log("inside timeout", tour);
+    }, 3000);
+    console.log("test", tour); */
+
+    //Product Tour
+    /* const tourOptions = {
+      options: {
+        darkLayerPersistence: true,
+        next: "Next",
+        prev: "Previous",
+        finish: "Okay!",
+        mobileThreshold: 768,
+      },
+
+      tips: [
+        {
+          title: "🤘🏼 My title",
+          description: "<h2>My description</h2>",
+          selector: ".pokemon-options-container #option-3",
+          x: 100,
+          y: 50,
+          offx: 0,
+          offy: 0,
+          position: "right",
+          onSelected: false,
+        },
+        {
+          title: "Another title",
+          description:
+            "<h2>My description</h2> <p>this is another description</p>",
+          selector: ".pokemon-picture-container #hidden-pokemon",
+          x: 50,
+          y: 100,
+          offx: 0,
+          offy: 0,
+          position: "bottom",
+          onSelected: false,
+        },
+      ],
+    };
+
+    setTimeout(() => {
+      ProductTourJS.init(tourOptions);
+      ProductTourJS.start();
+      console.log("object");
+    }, 2000); */
+
+    //Shepherd-Vue
+    /* tour.addSteps([
+      {
+        title: "Creating a Shepherd Tour",
+        text: `Creating a Shepherd tour is easy. too!\
+  Just create a \`Tour\` instance, and add as many steps as you want.`,
+        attachTo: {
+          element: ".pokemon-picture-container",
+          on: "bottom",
+        },
+        buttons: [
+          {
+            action: tour.next,
+            text: "Next",
+          },
+        ],
+        id: "creating",
+      },
+      {
+        id: "example-step",
+        text: "This step is attached to the bottom of the <code>.pokemon-page</code> element.",
+        attachTo: {
+          element: ".pokemon-options-container",
+          on: "bottom",
+        },
+        buttons: [
+          {
+            action: tour.back,
+            classes: "shepherd-button-secondary",
+            text: "Back",
+          },
+          {
+            text: "Next",
+            action: tour.next,
+          },
+        ],
+      },
+      {
+        id: "last-step",
+        text: "This step is attached to the left of the <code>#replay</code> element.",
+        attachTo: {
+          element: "#option-1",
+          on: "right",
+        },
+        buttons: [
+          {
+            text: "Finish!",
+            action: tour.complete,
+          },
+        ],
+      },
+    ]);
+    setTimeout(() => {
+      tour.start();
+    }, 3000); */
