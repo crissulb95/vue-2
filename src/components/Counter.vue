@@ -13,21 +13,24 @@
 <script>
 export default {
   props: {
-    title: String,
+    title: {
+      type: String,
+      default: 'Title'
+    },
     start: {
       type: Number,
       default: 5,
       validator(value) {
-        return value >= 0;
-      },
-    },
+        return value >= 0
+      }
+    }
   },
   /* props:[title] //Si no quieres especificar el tipado */
-  name: "Counter",
+  name: 'Counter',
   data() {
     return {
-      counter: this.start,
-    };
+      counter: this.start
+    }
   },
   methods: {
     //Rerenderea cada vez que se invoca
@@ -36,24 +39,24 @@ export default {
       return this.counter * this.counter;
     }, */
     increase() {
-      return this.counter++;
+      return this.counter++
     },
     decrease() {
-      return this.counter--;
-    },
+      return this.counter--
+    }
   },
   computed: {
     //Renderea y cachea el resultado; cambia solo cuando ocurre
     //algún cambio en las dependencias
     getSquareCounter() {
       //console.log("from computed");
-      return this.counter * this.counter;
+      return this.counter * this.counter
     },
     customTitle() {
-      return this.title || "Default title";
-    },
-  },
-};
+      return this.title || 'Default title'
+    }
+  }
+}
 </script>
 
 <style scoped>

@@ -6,7 +6,7 @@ const SETUP = {
   steps: [],
   prevLabel: "",
   nextLabel: "Siguiente",
-  doneLabel: "Finalizar",
+  doneLabel: "Iniciar recorrido",
   exitOnEsc: true,
   exitOnOverlayClick: false,
   keyboardNavigation: true,

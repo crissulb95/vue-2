@@ -1,7 +1,7 @@
 const isInViewport = (el) => {
   const { top, left, right, bottom } = el.getBoundingClientRect();
-  const thing = el.getBoundingClientRect();
-  /* console.table({
+  /*const thing = el.getBoundingClientRect();
+  console.table({
     top,
     left,
     bottom,

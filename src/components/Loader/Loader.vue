@@ -1,19 +1,18 @@
 <template>
   <div class="loader-container">
-    <div class="lds-dual-ring"></div>
+    <div class="lds-dual-ring" />
   </div>
 </template>
 
 <script>
 export default {
-  name: "Loader",
-};
+  name: 'Loader'
+}
 </script>
 
 <style>
 .loader-container {
   height: 100%;
-  min-height: 100vh;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -25,7 +24,7 @@ export default {
   height: 80px;
 }
 .lds-dual-ring:after {
-  content: " ";
+  content: ' ';
   display: block;
   width: 64px;
   height: 64px;

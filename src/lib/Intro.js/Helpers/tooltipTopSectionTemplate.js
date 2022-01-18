@@ -17,7 +17,6 @@ import { objIsEmpty } from ".";
  */
 const tooltipTopSectionTemplate = (topSectionInfo) => {
   // TODO: falta un if(isString) para las propiedades del objeto pasado o un try/catch
-  console.log(topSectionInfo);
   if (topSectionInfo && !objIsEmpty(topSectionInfo)) {
     const { imgItem, title, extraHTML } = topSectionInfo;
     if (

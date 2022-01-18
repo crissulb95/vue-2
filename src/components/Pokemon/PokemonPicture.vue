@@ -18,28 +18,28 @@
 
 <script>
 export default {
-  name: "Pokemon Picture",
+  name: 'Pokemon Picture',
   props: {
     pokeId: {
       type: [Number, String],
       required: true,
       default: 151,
       validator(value) {
-        return parseInt(value) > 0;
-      },
+        return parseInt(value) > 0
+      }
     },
     show: {
       type: Boolean,
       required: true,
-      default: false,
-    },
+      default: false
+    }
   },
   computed: {
     imgSrc() {
-      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokeId}.svg`;
-    },
-  },
-};
+      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokeId}.svg`
+    }
+  }
+}
 </script>
 
 <style scoped>

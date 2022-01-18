@@ -22,32 +22,32 @@
 
 <script>
 export default {
-  name: "Pokemon Options",
+  name: 'Pokemon Options',
   props: {
     pokemons: {
       type: Array,
-      required: true,
+      required: true
     },
     correctPokemon: {
       type: Object,
-      required: true,
+      required: true
     },
     show: {
       type: Boolean,
       required: true,
-      default: false,
-    },
+      default: false
+    }
   },
   methods: {
     afterClass(value) {
-      let auxClass = "fade-in";
+      let auxClass = 'fade-in'
       if (this.show && value === this.correctPokemon.id)
-        return `${auxClass} correct`;
-      if (this.show) return `${auxClass} wrong`;
-      return auxClass;
-    },
-  },
-};
+        return `${auxClass} correct`
+      if (this.show) return `${auxClass} wrong`
+      return auxClass
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -80,12 +80,13 @@ export default {
   max-width: 1140px;
   justify-content: space-between;
   padding-left: 0;
+  margin: 0;
   position: relative;
 }
 
 .pokemon-options-container ul::after {
   position: absolute;
-  content: "";
+  content: '';
   height: 15px;
   width: 15px;
   background-color: lightgrey;
@@ -141,7 +142,7 @@ export default {
   border-bottom: 4px solid black;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  content: "";
+  content: '';
   height: 50%;
   left: 50%;
   opacity: 1;
@@ -167,7 +168,7 @@ export default {
 .pokemon-options-container li > span::after {
   border-radius: 10px;
   border: 4px solid transparent;
-  content: "";
+  content: '';
   display: block;
   height: 100%;
   left: 50%;
@@ -221,11 +222,9 @@ export default {
 }
 
 .pokemon-options-container > button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  margin-left: 10px;
   border: 2px solid transparent;
-  padding: 10px 30px;
+  padding: 10px 20px;
   transition: 0.4s all ease-in-out;
   border-radius: 5px;
   background-color: white;

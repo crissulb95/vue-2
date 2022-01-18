@@ -1,8 +1,7 @@
 import stepsArray from "./stepsArray";
 import mockArray from "./mockArray";
 
-const correctSteps = () => {
-  return stepsArray().length > 0 ? stepsArray() : mockArray();
-};
+const correctSteps = () =>
+  stepsArray().length > 0 ? stepsArray() : mockArray();
 
 export default correctSteps;

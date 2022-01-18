@@ -1,31 +1,65 @@
 module.exports = {
+  // https://eslint.org/docs/user-guide/configuring#configuration-cascading-and-hierarchy
+  // This option interrupts the configuration hierarchy at this file
+  // Remove this if you have an higher level ESLint config file (it usually happens into a monorepos)
   root: true,
+
   env: {
-    node: true,
+    browser: true
   },
-  extends: ["plugin:vue/vue3-essential", "eslint:recommended", "@vue/prettier"],
-  parserOptions: {
-    parser: "babel-eslint",
-  },
-  rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "prettier/prettier": [
-      "error",
-      {
-        endOfLine: "auto",
-      },
-    ],
-  },
-  overrides: [
-    {
-      files: [
-        "**/__tests__/*.{j,t}s?(x)",
-        "**/tests/unit/**/*.spec.{j,t}s?(x)",
-      ],
-      env: {
-        jest: true,
-      },
-    },
+
+  // Rules order is important, please avoid shuffling them
+  extends: [
+    // Base ESLint recommended rules
+    // 'eslint:recommended',
+
+    // Uncomment any of the lines below to choose desired strictness,
+    // but leave only one uncommented!
+    // See https://eslint.vuejs.org/rules/#available-rules
+    'plugin:vue/essential', // Priority A: Essential (Error Prevention)
+    'plugin:vue/strongly-recommended' // Priority B: Strongly Recommended (Improving Readability)
+    // 'plugin:vue/recommended', // Priority C: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)
   ],
+
+  plugins: [
+    // https://eslint.vuejs.org/user-guide/#why-doesn-t-it-work-on-vue-file
+    // required to lint *.vue files
+    'vue'
+  ],
+
+  globals: {
+    ga: true, // Google Analytics
+    cordova: true,
+    __statics: true,
+    process: true,
+    Capacitor: true,
+    chrome: true
+  },
+
+  // add your custom rules here
+  rules: {
+    indent: 'off',
+    'space-before-function-paren': 'off',
+    // allow async-await
+    'generator-star-spacing': 'off',
+    // allow paren-less arrow functions
+    'arrow-parens': 'off',
+    'one-var': 'off',
+
+    'import/first': 'off',
+    'import/extensions': 'off',
+    'import/no-unresolved': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'prefer-promise-reject-errors': 'off',
+
+    // allow debugger during development only
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    quotes: [
+      'error',
+      'single',
+      {
+        allowTemplateLiterals: true
+      }
+    ]
+  }
 };

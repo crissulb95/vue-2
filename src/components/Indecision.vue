@@ -23,47 +23,48 @@
 export default {
   data() {
     return {
-      question: "primer valor",
+      question: 'primer valor',
       answer: null,
       bgGif: null,
-      isValidQuestion: false,
-    };
+      isValidQuestion: false
+    }
   },
   methods: {
     async getAnswer() {
       try {
-        this.answer = "pensando...";
+        this.answer = 'pensando...'
 
-        const { answer, image } = await fetch("https://yesno.wtf/api")
+        const { answer, image } = await fetch('https://yesno.wtf/api')
           .then((res) => res.json())
-          .catch((err) => console.error(err));
+          .catch((err) => console.error(err))
 
         this.answer =
-          answer === "yes" ? "Si" : answer === "maybe" ? "Tal vez" : "No!";
-        this.bgGif = image;
+          answer === 'yes' ? 'Si' : answer === 'maybe' ? 'Tal vez' : 'No!'
+        this.bgGif = image
       } catch (error) {
-        this.answer = "Hubo un error en la carga desde el API";
-        this.bgGif = null;
+        this.answer = 'Hubo un error en la carga desde el API'
+        this.bgGif = null
         console.log(
-          "IndecisionComponent: Error en la carga desde el API",
+          'IndecisionComponent: Error en la carga desde el API',
           error
-        );
+        )
       }
     },
+    onQuestionChanged(val) {
+      this.isValidQuestion = false
+      console.log({ val })
+
+      if (!val.includes('?')) return false
+
+      console.log({ val })
+      this.isValidQuestion = true
+      this.getAnswer()
+    }
   },
   watch: {
-    question(val) {
-      this.isValidQuestion = false;
-      console.log({ val });
-
-      if (!val.includes("?")) return false;
-
-      console.log({ val });
-      this.isValidQuestion = true;
-      this.getAnswer();
-    },
-  },
-};
+    question: 'onQuestionChanged'
+  }
+}
 </script>
 
 <style scoped>
@@ -88,7 +89,7 @@ export default {
 }
 .indecision-container .img-container::after {
   background-color: rgba(0, 0, 0, 0.3);
-  content: "";
+  content: '';
   height: 100%;
   left: 50%;
   position: absolute;
