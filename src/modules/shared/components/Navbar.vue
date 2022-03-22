@@ -17,6 +17,9 @@
         :link="link"
         :class="link.name.includes('dbz') && 'dbz'"
       />
+      <button class="btn btn-outline-secondary">
+        <i class="fa fa-sign-out-alt"></i>
+      </button>
     </div>
   </nav>
 </template>
@@ -27,7 +30,7 @@ export default {
   data() {
     return {
       links: [
-        { meta: { tagName: 'Home' }, to: '/', name: 'daybook-home' },
+        { meta: { tagName: 'Home' }, to: '/', name: 'no-entry' },
         { meta: { tagName: 'About' }, to: '/about', name: 'pokemon-about' },
         { meta: { tagName: 'Quiz' }, to: '/quiz', name: 'pokemon-quiz' },
         {
@@ -57,7 +60,6 @@ export default {
 
 <style scoped>
 .navbar {
-  background-color: white;
   width: 100%;
   padding: 10px 20px;
   display: flex;

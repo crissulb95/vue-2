@@ -1,20 +1,28 @@
 <template>
   <section class="daybook-layout">
-    <h3>Daybook layout</h3>
+    <home />
   </section>
 </template>
 
 <script>
+import { defineAsyncComponent } from '@vue/runtime-core'
 export default {
-  name: 'DayBookLayout'
+  name: 'DayBookLayout',
+  components: {
+    Home: defineAsyncComponent(() =>
+      import(/* webpackChunkName: "Home" */ '../views/Home')
+    )
+  }
 }
 </script>
 
-<style sass scoped>
+<style lang="scss" scoped>
 .daybook-layout {
   width: 100vw;
   min-height: calc(100vh - 80px);
-  padding: 10px;
+  padding: 40px 10px;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 </style>

@@ -1,9 +1,11 @@
 import { createStore } from 'vuex'
-import pokemonStore from '../modules/modulo2/store'
+import daybook from '../modules/daybook/store'
+import pokemon from '../modules/modulo2/store'
 
 const store = createStore({
   modules: {
-    pokemon: pokemonStore
+    pokemon,
+    daybook
   }
 })
 

@@ -43,6 +43,9 @@ export default {
   color: grey;
 }
 
+.normal-link {
+  color: white;
+}
 .normal-link,
 .is-active {
   text-decoration: none;

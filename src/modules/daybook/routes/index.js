@@ -16,10 +16,18 @@ const routes = [
     children: [
       {
         path: '',
-        name: 'daybook-home',
+        name: 'no-entry',
         component: () =>
           import(
-            /* webpackChunkName: "CharactersPage" */ '@/modules/daybook/views/Home'
+            /* webpackChunkName: "No Entry" */ '@/modules/daybook/components/NoEntrySelected'
+          )
+      },
+      {
+        path: ':id',
+        name: 'entry',
+        component: () =>
+          import(
+            /* webpackChunkName: "Entry" */ '@/modules/daybook/components/EntrySelected'
           )
       }
     ]

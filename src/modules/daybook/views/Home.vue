@@ -1,6 +1,13 @@
 <template>
-  <div class="daybook-home-page">
-    <counter />
+  <div class="daybook-home-page container">
+    <div class="row">
+      <div class="col-4">
+        <entry-list />
+      </div>
+      <div class="col">
+        <entry-display />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -9,17 +16,23 @@ import { defineAsyncComponent } from '@vue/runtime-core'
 export default {
   name: 'DaybookHomePage',
   components: {
-    Counter: defineAsyncComponent(() =>
-      import(/* webpackChunkName: "Counter" */ '../components/counter')
+    EntryList: defineAsyncComponent(() =>
+      import(/* webpackChunkName: "EntryList" */ '../components/EntryList')
+    ),
+    EntryDisplay: defineAsyncComponent(() =>
+      import(
+        /* webpackChunkName: "EntryDisplay" */ '../components/EntryDisplay'
+      )
     )
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .daybook-home-page {
   width: 100%;
-  min-height: 100%;
+  flex: 1;
   position: relative;
+  height: inherit;
 }
 </style>
